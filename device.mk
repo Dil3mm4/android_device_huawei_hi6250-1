@@ -57,10 +57,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	hw-fpnav-daemon
 
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio
-
 # KeyHandler
 #PRODUCT_PACKAGES += \
 #    org.lineageos.keyhandler
