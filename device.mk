@@ -37,6 +37,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PACKAGES += \
     libion
 
+# Google Play
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/google.xml:system/etc/sysconfig/google.xml
+
 # HIDL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml
