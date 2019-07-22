@@ -31,17 +31,14 @@
          backlight values for LUX levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>5</item>
-        <item>25</item>
-        <item>50</item>
+        <item>1</item>
+        <item>40</item>
         <item>100</item>
-        <item>200</item>
-        <item>300</item>
-        <item>500</item>
-        <item>750</item>
-        <item>1000</item>
-        <item>1500</item>
-        <item>2000</item>
+        <item>325</item>
+        <item>600</item>
+        <item>1250</item>
+        <item>2200</item>
+        <item>4000</item>
         <item>10000</item>
     </integer-array>
 
@@ -51,18 +48,16 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>7</item>
-        <item>10</item>
-        <item>16</item>
-        <item>29</item>
-        <item>48</item>
-        <item>80</item>
-        <item>126</item>
-        <item>181</item>
-        <item>211</item>
-        <item>232</item>
-        <item>255</item>
-        <item>255</item>
+        <item>11</item>   <!-- 0-1 -->
+        <item>22</item>   <!-- 1-40 -->
+        <item>47</item>   <!-- 40-100 -->
+        <item>61</item>   <!-- 100-325 -->
+        <item>84</item>   <!-- 325-600 -->
+        <item>107</item>  <!-- 600-1250 -->
+        <item>154</item>  <!-- 1250-2200 -->
+        <item>212</item>  <!-- 2200-4000 -->
+        <item>245</item>  <!-- 4000-10000 -->
+        <item>255</item>  <!-- 10000+ -->
     </integer-array>
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
@@ -96,14 +91,14 @@
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
          [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
     <integer-array translatable="false" name="config_tether_upstream_types">
-        <item>1</item>
-        <item>0</item>
+        <item>0</item>      
+   	    <item>1</item>
         <item>5</item>
         <item>7</item>
     </integer-array>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-    <bool translatable="false" name="config_wifi_dual_band_support">false</bool>
+    <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
     <!-- Is the device capable of hot swapping an UICC Card -->
     <bool name="config_hotswapCapable">true</bool>
@@ -124,12 +119,8 @@
     <!-- Default color for notification LED. -->
     <color name="config_defaultNotificationColor">#ff00ff00</color>
 
-    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
-         on the headphone/microphone jack. When false use the older uevent framework. -->
-    <bool name="config_useDevInputEventForAudioJack">true</bool>
-
     <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">6</integer>
+    <integer name="config_multiuserMaximumUsers">5</integer>
 
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
