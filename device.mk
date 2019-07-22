@@ -41,6 +41,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/releasetools/fingerprint.kl:install/bin/fingerprint.kl \
+    $(LOCAL_PATH)/hw-fpnav/hw-fingerprint.rc:system/etc/init/hw-fingerprint.rc \
+    $(LOCAL_PATH)/hw-fpnav/hw-fpnav:system/bin/hw-fpnav \
+    $(LOCAL_PATH)/hw-fpnav/hw-fpnav.dex:system/phh/hw-fpnav.dex \
+    $(LOCAL_PATH)/hw-fpnav/fingerprint.kl:system/phh/huawei/fingerprint.kl
+
+PRODUCT_PACKAGES += \
+	hw-fpnav-daemon
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio

@@ -22,6 +22,11 @@ sed -i "/genfscon fuseblk/d" /system/etc/selinux/plat_sepolicy.cil
 # Fix logd service definition
 sed -i "s/socket logdw dgram+passcred 0222 logd logd/socket logdw dgram 0222 logd logd/g" /system/etc/init/logd.rc
 
+# Fingerprint gestures hacks
+rm -rf /system/usr/keychars/Virtual.kcm
+cp /tmp/install/bin/fingerprint.kl /system/usr/keylayout/fingerprint.kl
+rm -rf /vendor/usr/keylayout/fingerprint.kl
+
 # Disable parsing intra-refresh-mode parameter in libstagefright
 sed -i 's/intra-refresh-mode/intra-refresh-nope/' /system/lib64/libstagefright.so
 sed -i 's/intra-refresh-mode/intra-refresh-nope/' /system/lib/libstagefright.so
