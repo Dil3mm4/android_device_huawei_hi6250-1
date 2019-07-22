@@ -41,6 +41,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml
 
+# Hotword fix
+PRODUCT_PACKAGES += \
+    HotwordEnrollmentOKGoogleHI6403 \
+    HotwordEnrollmentXGoogleHI6403
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/fingerprint.kl:install/bin/fingerprint.kl \
