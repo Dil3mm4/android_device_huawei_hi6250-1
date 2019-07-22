@@ -13,6 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-add_lunch_combo rr_leland-userdebug
-
+if [[ -e vendor/lineage ]]; then
+add_lunch_combo lineage_hi6250-userdebug
+fi

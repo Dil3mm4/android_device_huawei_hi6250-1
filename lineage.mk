@@ -13,19 +13,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product, $(LOCAL_PATH)/full_leland.mk)
+$(call inherit-product, $(LOCAL_PATH)/full_hi6250.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := lineage_leland
-PRODUCT_DEVICE := leland
-PRODUCT_BRAND := Honor
-PRODUCT_MODEL := Honor 9 Lite
+PRODUCT_NAME := lineage_hi6250
+PRODUCT_DEVICE := hi6250
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := HUAWEI P10 Lite
 PRODUCT_MANUFACTURER := Huawei
 
 # Override device name

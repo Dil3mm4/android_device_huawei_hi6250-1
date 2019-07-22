@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/honor/leland/leland-vendor.mk)
+$(call inherit-product, vendor/huawei/hi6250/hi6250-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -105,7 +105,7 @@ PRODUCT_PACKAGES += \
 
 # Release tools
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/releasetools/releasetools.leland.sh:install/bin/releasetools.leland.sh
+    $(LOCAL_PATH)/releasetools/releasetools.hi6250.sh:install/bin/releasetools.hi6250.sh
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \

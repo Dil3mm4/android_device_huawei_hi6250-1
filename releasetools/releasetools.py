@@ -14,7 +14,7 @@
 
 def FullOTA_InstallEnd(info):
     info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system");');
-    info.script.AppendExtra('assert(run_program("/sbin/sh", "/tmp/install/bin/releasetools.leland.sh") == 0);')
+    info.script.AppendExtra('assert(run_program("/sbin/sh", "/tmp/install/bin/releasetools.hi6250.sh") == 0);')
     info.script.AppendExtra('unmount("/system");');
 
 def FullOTA_PostValidate(info):

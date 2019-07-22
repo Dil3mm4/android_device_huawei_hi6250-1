@@ -16,7 +16,7 @@
 
 include build/make/target/board/treble_common.mk
 
-DEVICE_PATH := device/honor/leland
+DEVICE_PATH := device/huawei/hi6250
 
 # Architecture
 TARGET_ARCH := arm64
@@ -41,7 +41,7 @@ TARGET_NO_KERNEL := false
 TARGET_PREBUILT_KERNEL := /dev/null
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := leland,lld,hi6250
+TARGET_OTA_ASSERT_DEVICE := hi6250
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -55,7 +55,8 @@ BOARD_HARDWARE_CLASS += \
     $(DEVICE_PATH)/lineagehw
 
 # Partitions
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3707764736
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3103539200
+BOARD_CACHEIMAGE_PARTITION_SIZE := 127909888
 
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
