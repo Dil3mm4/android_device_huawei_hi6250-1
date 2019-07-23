@@ -156,5 +156,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vndk-compat/ld.config.compat.txt:system/etc/ld.config.compat.txt \
     $(LOCAL_PATH)/vndk-compat/vndk-compat.rc:system/etc/init/vndk-compat.rc
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.adb.secure=1
+# Speed-up
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.image-dex2oat-filter=verify-none
+
