@@ -30,16 +30,3 @@ rm -rf /vendor/usr/keylayout/fingerprint.kl
 # Disable parsing intra-refresh-mode parameter in libstagefright
 sed -i 's/intra-refresh-mode/intra-refresh-nope/' /system/lib64/libstagefright.so
 sed -i 's/intra-refresh-mode/intra-refresh-nope/' /system/lib/libstagefright.so
-
-if [ "$(cat /proc/device-tree/hisi,product_name)" = "LLD-L31" ]; then
-    # Keep NFC
-    echo 0
-else
-    # Remove NFC
-    rm -rf /system/app/NfcNci
-    rm -rf /system/etc/permissions/android.hardware.nfc.hce.xml
-    rm -rf /system/etc/permissions/android.hardware.nfc.xml
-    rm -rf /system/etc/permissions/com.android.nfc_extras.xml
-    rm -rf /system/framework/com.android.nfc_extras.jar
-    rm -rf /system/priv-app/Tag
-fi
