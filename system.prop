@@ -41,3 +41,6 @@ debug.sf.hw=1
 hwui.disable_vsync=true 
 ro.config.enable.hw_accel=true 
 video.accelerate.hw=1
+
+# OTA
+lineage.updater.uri=https://raw.githubusercontent.com/DarkJoker360/android_devices_OTA/Oreo/lineage_hi6250.json
