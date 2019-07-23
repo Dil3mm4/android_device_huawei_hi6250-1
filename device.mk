@@ -70,16 +70,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	hw-fpnav-daemon
 
-# KeyHandler
-#PRODUCT_PACKAGES += \
-#    org.lineageos.keyhandler
-
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras \
     nfc_nci.pn54x.default
+
+# NFC confs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -106,7 +107,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:system/etc/permissions/android.hardware.nfc.hcef.xml
 
 # Properties
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
