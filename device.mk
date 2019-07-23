@@ -23,6 +23,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
+# Codecs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/media-codec-blacklist:system/etc/media-codec-blacklist
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.hi6250.rc \
