@@ -47,8 +47,8 @@ PRODUCT_COPY_FILES += \
 
 # Gps
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps_debug.conf
+    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps_debug.conf
 
 # HIDL
 PRODUCT_COPY_FILES += \
