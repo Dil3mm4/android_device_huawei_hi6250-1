@@ -3,6 +3,13 @@ audio.deep_buffer.media=true
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 
+# BT
+persist.sys.bt.unsupport.states=000000000000000000000011111
+persist.sys.bt.unsupport.features=00000001
+
+# Enable ADB authentication
+ro.adb.secure=1
+
 # GSI always generate dex pre-opt in system image
 ro.cp_system_other_odex=0
 
@@ -11,3 +18,26 @@ sys.fpnav.enabled=1
 
 # Make sdcards visibile in StorageManager
 persist.sys.adoptable_fbe=true
+
+# RIL
+ro.telephony.isHisiRIL=true
+persist.sys.signal.level=openkirin
+ro.huaweiril=true
+
+# Security Patches
+ro.build.version.security_patch_sys=2019-07-05
+
+# MediaCodecs
+persist.sys.google_avc_enc=0 
+persist.sys.sr_google_avc_enc=1 
+persist.debug.wfd.enable=0 
+
+# Gpu
+debug.egl.hw=1 
+debug.egl.profiler=1 
+debug.hwui.use_buffer_age=false 
+debug.performance.tuning=1 
+debug.sf.hw=1 
+hwui.disable_vsync=true 
+ro.config.enable.hw_accel=true 
+video.accelerate.hw=1
