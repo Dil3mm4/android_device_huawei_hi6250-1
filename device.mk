@@ -140,6 +140,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
 
+# Sdcard
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.sys.sdcardfs=0 \
+    persist.sys.sdcardfs.emulated=0 \
+    persist.sys.sdcardfs.public=0
+
 # Shims
 PRODUCT_PACKAGES += \
     libshims_hisupl
